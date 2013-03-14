@@ -364,3 +364,84 @@ body { color:#fff; }
 
 }
 
+// layout7
+
+.layout7 {
+
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(row);
+    height:100%;
+    width:100%;
+  }
+    .frame-side {
+      @include flex(none);
+      width:80px;
+      @include display(flex);
+      @include flex-direction(column)
+    }
+      .frame-side-header {
+        @include c5;
+        @include flex(none);
+        min-height:70px;
+      }
+      .frame-side-body {
+        @include c2;
+        @include flex(auto);
+        min-height:0;
+      }
+    .frame-main {
+      @include flex(auto);
+      min-width:0;
+      background:#666;
+      @include display(flex);
+      border-right:1px solid #666;
+    }
+      .frame-col {
+        @include display(flex);
+        @include flex-direction(column);
+        min-width:250px;
+        @include flex(auto);
+        border-left:1px solid #666;
+      }
+        .frame-col-header {
+          @include flex(none);
+          min-height:70px;
+          @include c1;
+        }
+        .frame-col-body {
+          @include flex(auto);
+          min-height:0;
+          overflow:scroll;
+          @include c3;
+        }
+
+  .box {
+    padding:10px;
+  }
+  .frame-side-header .box {
+    text-align:center;
+    @include c5in;
+    margin:10px 10px 0;
+  }
+  .frame-side-body .box {
+    @include c2in;
+    margin:10px 10px 0;
+    text-align:center;
+  }
+  .frame-col-header .box {
+    text-align:center;
+    @include c1in;
+    margin:10px 10px 0;
+  }
+  .frame-col-body .box {
+    @include c3in;
+    margin:10px;
+  }
+
+}
+

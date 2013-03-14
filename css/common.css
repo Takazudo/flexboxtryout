@@ -858,3 +858,90 @@ body {
   text-align: center; }
 .layout6 .frame-main-main .box {
   background: #B47FC7; }
+
+.layout7, .layout7 body {
+  height: 100%; }
+.layout7 .frame-wrapall {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  width: 100%; }
+.layout7 .frame-side {
+  -webkit-flex: none;
+  -moz-flex: none;
+  flex: none;
+  width: 80px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column; }
+.layout7 .frame-side-header {
+  background: #E85A4F;
+  -webkit-flex: none;
+  -moz-flex: none;
+  flex: none;
+  min-height: 70px; }
+.layout7 .frame-side-body {
+  background: #3ABCA1;
+  -webkit-flex: auto;
+  -moz-flex: auto;
+  flex: auto;
+  min-height: 0; }
+.layout7 .frame-main {
+  -webkit-flex: auto;
+  -moz-flex: auto;
+  flex: auto;
+  min-width: 0;
+  background: #666;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  border-right: 1px solid #666666; }
+.layout7 .frame-col {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  min-width: 250px;
+  -webkit-flex: auto;
+  -moz-flex: auto;
+  flex: auto;
+  border-left: 1px solid #666666; }
+.layout7 .frame-col-header {
+  -webkit-flex: none;
+  -moz-flex: none;
+  flex: none;
+  min-height: 70px;
+  background: #B8D46C; }
+.layout7 .frame-col-body {
+  -webkit-flex: auto;
+  -moz-flex: auto;
+  flex: auto;
+  min-height: 0;
+  overflow: scroll;
+  background: #3799DB; }
+.layout7 .box {
+  padding: 10px; }
+.layout7 .frame-side-header .box {
+  text-align: center;
+  background: #EF6E62;
+  margin: 10px 10px 0; }
+.layout7 .frame-side-body .box {
+  background: #4ACDB6;
+  margin: 10px 10px 0;
+  text-align: center; }
+.layout7 .frame-col-header .box {
+  text-align: center;
+  background: #CCE285;
+  margin: 10px 10px 0; }
+.layout7 .frame-col-body .box {
+  background: #46AEE6;
+  margin: 10px; }
