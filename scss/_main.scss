@@ -1,0 +1,366 @@
+html,body { margin:0; padding:0; }
+body { color:#fff; }
+
+
+// layout1
+
+.layout1 {
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(column);
+    max-width:1200px;
+    margin:0 auto;
+  }
+    .frame-header {
+      @include c1;
+      min-height:100px;
+      padding:10px;
+    }
+    .frame-body {
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      min-height:400px;
+    }
+    .frame-body > div{
+      padding:10px;
+    }
+      .frame-body-navprimary {
+        @include c2;
+        @include flex(1 200px);
+      }
+      .frame-body-main {
+        @include c3;
+        @include flex(2 400px);
+      }
+      .frame-body-navsecondary {
+        @include c4;
+        @include flex(1 200px);
+      }
+    .frame-footer {
+      @include c5;
+      min-height:100px;
+      padding:10px;
+    }
+
+  .box {
+    padding:10px;
+    margin:0 0 10px;
+  }
+  .frame-header .box { @include c1in; }
+  .frame-body-navprimary .box { @include c2in; }
+  .frame-body-main .box { @include c3in; }
+  .frame-body-navsecondary .box { @include c4in; }
+  .frame-footer .box { @include c5in; }
+
+}
+
+
+// layout2
+
+.layout2 {
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(column);
+    max-width:1200px;
+    margin:0 auto;
+  }
+    .frame-header {
+      @include c1;
+      min-height:100px;
+      padding:10px;
+    }
+    .frame-body {
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      min-height:400px;
+    }
+      .frame-body-navprimary {
+        @include c2;
+        @include flex(1 200px);
+        @include display(flex);
+        @include flex-direction(column);
+      }
+        .frame-body-navprimary-main {
+          padding:10px;
+          @include flex(1 auto);
+        }
+        .frame-body-navprimary-util {
+          padding:10px 10px 0;
+          @include flex(0 50px);
+          @include c6;
+        }
+      .frame-body-main {
+        padding:10px;
+        @include c3;
+        @include flex(2 400px);
+      }
+      .frame-body-navsecondary {
+        @include c4;
+        @include flex(1 200px);
+        @include display(flex);
+        @include flex-direction(column);
+      }
+        .frame-body-navsecondary-main {
+          padding:10px;
+          @include flex(1 auto);
+        }
+        .frame-body-navsecondary-util {
+          padding:10px 10px 0;
+          @include flex(0 50px);
+          @include c6;
+        }
+    .frame-footer {
+      @include c5;
+      min-height:100px;
+      padding:10px;
+    }
+
+  .box {
+    padding:10px;
+    margin:0 0 10px;
+  }
+  .frame-header .box { @include c1in; }
+  .frame-body-navprimary-main .box { @include c2in; }
+  .frame-body-navprimary-util .box { @include c6in; }
+  .frame-body-main .box { @include c3in; }
+  .frame-body-navsecondary-main .box { @include c4in; }
+  .frame-body-navsecondary-util .box { @include c6in; }
+  .frame-footer .box { @include c5in; }
+
+}
+
+
+// layout3
+
+.layout3 {
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(column);
+    max-width:1200px;
+    margin:0 auto;
+  }
+    .frame-header {
+      @include c1;
+      min-height:100px;
+      padding:10px;
+    }
+    .frame-body {
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      min-height:400px;
+    }
+    .frame-body > div{
+      padding:10px;
+    }
+      .frame-body-main {
+        @include c3;
+        @include flex(99999 0 400px);
+      }
+      .frame-body-navprimary {
+        @include c2;
+        @include flex(1 0 200px);
+      }
+    .frame-footer {
+      @include c5;
+      min-height:100px;
+      padding:10px;
+    }
+
+  .box {
+    padding:10px;
+    margin:0 0 10px;
+  }
+  .frame-header .box { @include c1in; }
+  .frame-body-navprimary .box { @include c2in; }
+  .frame-body-main .box { @include c3in; }
+  .frame-body-navsecondary .box { @include c4in; }
+  .frame-footer .box { @include c5in; }
+
+}
+
+
+// layout4
+
+.layout4 {
+  
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(column);
+    height:100%;
+  }
+    .frame-header {
+      @include flex(1 100px);
+      @include c4;
+      height:100px;
+    }
+    .frame-body {
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex(auto);
+      min-height:0;
+    }
+      .frame-nav1 {
+        @include flex(0);
+        min-width:200px;
+        @include c1;
+        overflow:scroll;
+      }
+      .frame-nav2 {
+        @include flex(0);
+        min-width:200px;
+        @include c2;
+        overflow:scroll;
+      }
+      .frame-main {
+        @include flex(1 auto);
+        @include c3;
+        min-width:300px;
+        overflow:scroll;
+      }
+
+  .box {
+    padding:10px;
+    margin:0 0 10px;
+    margin:10px 10px 0;
+  }
+  .frame-header .box { @include c4in; }
+  .frame-nav1 .box { @include c1in; }
+  .frame-nav2 .box { @include c2in; }
+  .frame-main .box { @include c3in; }
+
+}
+
+
+// layout5
+
+.layout5 {
+  
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(column);
+    height:100%;
+    min-width:300px;
+    max-width:920px;
+    margin:0 auto;
+  }
+    .frame-header {
+      @include flex(none);
+      @include c1;
+      height:50px;
+      padding:10px;
+    }
+    .frame-body {
+      @include flex(auto);
+      @include c2;
+      min-height:0;
+      padding:10px;
+      overflow:scroll;
+    }
+    .frame-footer {
+      @include flex(none);
+      @include c3;
+      height:50px;
+      padding:10px;
+    }
+
+  .box {
+    padding:10px;
+  }
+  .frame-body .box {
+    @include c2in;
+    margin:0 0 10px;
+  }
+
+}
+
+
+// layout6
+
+.layout6 {
+  
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(row);
+    height:100%;
+    width:100%;
+  }
+    .frame-nav {
+      @include flex(0 320px);
+      @include display(flex);
+      @include flex-direction(column);
+    }
+      .frame-nav-header {
+        @include c1;
+        @include flex(none);
+        min-height:80px;
+      }
+      .frame-nav-body {
+        @include flex(auto);
+        @include display(flex);
+        @include flex-direction(row);
+        min-height:0;
+      }
+        .frame-nav-body-side {
+          @include c2;
+          @include flex(none);
+          min-width:80px;
+        }
+        .frame-nav-body-main {
+          @include c3;
+          @include flex(auto);
+          min-width:200px;
+          overflow:scroll;
+        }
+    .frame-main {
+      @include flex(1 500px);
+      @include display(flex);
+      @include flex-direction(column);
+      min-width:400px;
+    }
+      .frame-main-header {
+        @include c5;
+        @include flex(none);
+        min-height:80px;
+      }
+      .frame-main-main {
+        @include c4;
+        @include flex(auto);
+        min-height:0;
+        padding:10px;
+        overflow:scroll;
+      }
+
+  .box {
+    padding:10px;
+    margin:0 0 10px;
+  }
+  .frame-nav-header .box { @include c1in; margin:10px; }
+  .frame-main-header .box { @include c5in; margin:10px; }
+  .frame-nav-body-main .box { @include c3in; margin:10px 10px 0; }
+  .frame-nav-body-side .box {
+    @include c2in;
+    margin:10px 10px 0;
+    text-align:center;
+  }
+  .frame-main-main .box { @include c4in; }
+
+}
+
