@@ -522,3 +522,175 @@ body { color:#fff; }
       }
 
 }
+
+.layout11 {
+
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(row);
+    width:100%;
+    height:100%;
+  }
+    .frame-menu {
+      @include c1;
+      @include display(flex);
+      @include flex-direction(column);
+      height:100%;
+      width:40%;
+    }
+      .frame-menucol1 {
+        @include c1in;
+        @include flex(none);
+        height:100px;
+        margin:10px;
+        padding:10px;
+      }
+      .frame-menucol2 {
+        @include c1in;
+        @include flex(auto);
+        position:relative;
+        margin:0 10px;
+      }
+        .frame-menucol2-inner {
+          position:absolute;
+          left:0;
+          top:0;
+          right:0;
+          bottom:0;
+          overflow:scroll;
+          padding:10px;
+        }
+      .frame-menucol3 {
+        @include c1in;
+        @include flex(none);
+        height:100px;
+        margin:10px;
+        padding:10px;
+      }
+    .frame-main {
+      @include c2;
+      @include flex(auto);
+      height:100%;
+      position:relative;
+      width:60%;
+    }
+      .frame-main-inner {
+        position:absolute;
+        top:10px;
+        right:10px;
+        bottom:10px;
+        left:10px;
+        @include c2in;
+        padding:10px;
+        overflow:scroll;
+      }
+
+}
+
+.layout12 {
+
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include c3;
+    @include display(flex);
+    @include flex-flow(wrap);
+    width:100%;
+    height:100%;
+    @include box-sizing(border-box);
+    padding:10px;
+  }
+    .mod-item {
+      width:33.33%;
+      height:50%;
+      position:relative;
+    }
+      .mod-item-inner {
+        @include c3in;
+        position:absolute;
+        top:10px;
+        right:10px;
+        bottom:10px;
+        left:10px;
+        padding:10px;
+      }
+
+}
+
+.layout13 {
+
+  &, & body {
+    height:100%;
+  }
+
+  .frame-wrapall {
+    @include display(flex);
+    @include flex-direction(column);
+    height:100%;
+  }
+    .frame-gheader {
+      height:60px;
+      padding:10px;
+      @include c1;
+      text-align:center;
+    }
+    .frame-gmain {
+      @include flex(auto);
+      position:relative;
+    }
+      .frame-gmain-inner {
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        overflow:scroll;
+        @include display(flex);
+        @include flex-direction(column);
+      }
+        .mod-navs {
+          height:30%;
+          min-height:150px;
+          @include display(flex);
+          @include flex-direction(row);
+          @include flex-flow(wrap);
+          @include c4;
+          padding:10px;
+        }
+          .mod-navs .item {
+            width:33.33%;
+            position:relative;
+          }
+            .mod-navs .item div {
+              position:absolute;
+              left:10px;
+              top:10px;
+              right:10px;
+              bottom:10px;
+              @include c4in;
+              padding:10px;
+              text-align:center;
+            }
+        .mod-detail {
+          @include c2;
+          padding:10px;
+          @include flex(auto);
+        }
+          .mod-detail-inner {
+            @include c2in;
+            padding:10px;
+          }
+    .frame-gfooter {
+      height:60px;
+      text-align:center;
+      padding:10px;
+      @include c1;
+    }
+
+}
