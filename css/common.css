@@ -945,3 +945,82 @@ body {
 .layout7 .frame-col-body .box {
   background: #46AEE6;
   margin: 10px; }
+
+.layout8 .mod-item {
+  background: #B8D46C;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid #333333; }
+  .layout8 .mod-item:first-child {
+    border-top: 1px solid #333333; }
+  .layout8 .mod-item .media {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #333333;
+    background: #CCE285;
+    margin: 10px; }
+  .layout8 .mod-item .womedia {
+    padding: 10px 10px 10px 0; }
+
+.layout9 .frame-wrapall {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  flex-flow: wrap;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  background: #B8D46C; }
+.layout9 .mod-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  border-top: 1px solid #333333;
+  border-left: 1px solid #333333;
+  -webkit-flex: 1 300px;
+  -moz-flex: 1 300px;
+  flex: 1 300px; }
+  .layout9 .mod-item .media {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #333333;
+    background: #CCE285;
+    margin: 10px; }
+  .layout9 .mod-item .womedia {
+    padding: 10px 10px 10px 0; }
+
+.layout10 .frame-wrapall {
+  background: #B8D46C; }
+.layout10 .frame-wrapall-inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  margin: 0 auto; }
+.layout10 .mod-item {
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  background: #CCE285;
+  border: 1px solid #333333; }
