@@ -1197,3 +1197,50 @@ body {
   text-align: center;
   padding: 10px;
   background: #B8D46C; }
+
+.layout14 body {
+  background: #B8D46C; }
+.layout14 .frame-wrapall {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 10px; }
+.layout14 .frame-header {
+  background: #3ABCA1;
+  padding: 10px; }
+.layout14 .frame-header-inner {
+  background: #4ACDB6;
+  padding: 10px; }
+.layout14 .frame-body {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap; }
+.layout14 .frame-main {
+  background: #3799DB;
+  -webkit-flex: 9999 400px;
+  -moz-flex: 9999 400px;
+  flex: 9999 400px;
+  padding: 10px; }
+.layout14 .frame-main-inner {
+  background: #46AEE6;
+  padding: 10px; }
+.layout14 .frame-side {
+  background: #A26CB8;
+  -webkit-flex: 1 300px;
+  -moz-flex: 1 300px;
+  flex: 1 300px;
+  padding: 10px; }
+.layout14 .frame-side-inner {
+  background: #B47FC7;
+  padding: 10px; }
+.layout14 .frame-footer {
+  background: #E85A4F;
+  padding: 10px; }
+.layout14 .frame-footer-inner {
+  background: #EF6E62;
+  padding: 10px; }

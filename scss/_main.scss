@@ -694,3 +694,53 @@ body { color:#fff; }
     }
 
 }
+
+.layout14 {
+	body {
+		@include c1;
+	}
+	.frame-wrapall {
+		margin:0 auto;
+		max-width:1200px;
+		padding:0 10px;
+	}
+		.frame-header {
+			@include c2;
+			padding:10px;
+		}
+			.frame-header-inner {
+				@include c2in;
+				padding:10px;
+			}
+		.frame-body {
+			@include display(flex);
+			@include flex-direction(row);
+			@include flex-wrap(wrap);
+		}
+			.frame-main {
+				@include c3;
+				@include flex(9999 400px);
+				padding:10px;
+			}
+				.frame-main-inner {
+					@include c3in;
+					padding:10px;
+				}
+			.frame-side {
+				@include c4;
+				@include flex(1 300px);
+				padding:10px;
+			}
+				.frame-side-inner {
+					@include c4in;
+					padding:10px;
+				}
+		.frame-footer {
+			@include c5;
+			padding:10px;
+		}
+			.frame-footer-inner {
+				@include c5in;
+				padding:10px;
+			}
+}
