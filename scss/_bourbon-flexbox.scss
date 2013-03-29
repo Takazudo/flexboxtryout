@@ -7,14 +7,14 @@
   @if $value == "flex" {
     display: -webkit-flex;
     display: -moz-flex;
-    display: -ms-flex;
+    display: -ms-flexbox;
     display: flex;
   }
 
   @elseif $value == "inline-flex" {
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
-    display: -ms-inline-flex;
+    display: -ms-inline-flexbox;
     display: flex;
   }
 

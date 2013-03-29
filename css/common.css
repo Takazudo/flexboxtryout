@@ -456,7 +456,7 @@ body {
 .layout1 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -471,7 +471,7 @@ body {
 .layout1 .frame-body {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -523,7 +523,7 @@ body {
 .layout2 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -538,7 +538,7 @@ body {
 .layout2 .frame-body {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -557,7 +557,7 @@ body {
   flex: 1 200px;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -591,7 +591,7 @@ body {
   flex: 1 200px;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -635,7 +635,7 @@ body {
 .layout3 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -650,7 +650,7 @@ body {
 .layout3 .frame-body {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -698,7 +698,7 @@ body {
 .layout4 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -715,7 +715,7 @@ body {
 .layout4 .frame-body {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -768,7 +768,7 @@ body {
 .layout5 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -814,7 +814,7 @@ body {
 .layout6 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -829,7 +829,7 @@ body {
   flex: 0 320px;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -849,7 +849,7 @@ body {
   flex: auto;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -878,7 +878,7 @@ body {
   flex: 1 500px;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -925,7 +925,7 @@ body {
 .layout7 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -941,7 +941,7 @@ body {
   width: 80px;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -970,13 +970,13 @@ body {
   background: #666;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   border-right: 1px solid #666666; }
 .layout7 .frame-col {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -1025,7 +1025,7 @@ body {
   background: #B8D46C;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1046,7 +1046,7 @@ body {
 .layout9 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1062,7 +1062,7 @@ body {
 .layout9 .mod-item {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1088,7 +1088,7 @@ body {
 .layout10 .frame-wrapall-inner {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1117,7 +1117,7 @@ body {
 .layout11 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1129,7 +1129,7 @@ body {
   background: #B8D46C;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -1196,7 +1196,7 @@ body {
   background: #3799DB;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-flow: wrap;
   -moz-flex-flow: wrap;
@@ -1226,7 +1226,7 @@ body {
 .layout13 .frame-wrapall {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -1253,7 +1253,7 @@ body {
   overflow: scroll;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -1264,7 +1264,7 @@ body {
   min-height: 150px;
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1319,7 +1319,7 @@ body {
 .layout14 .frame-body {
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
