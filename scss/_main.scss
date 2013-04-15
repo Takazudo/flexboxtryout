@@ -696,51 +696,440 @@ body { color:#fff; }
 }
 
 .layout14 {
-	body {
-		@include c1;
-	}
-	.frame-wrapall {
-		margin:0 auto;
-		max-width:1200px;
-		padding:0 10px;
-	}
-		.frame-header {
-			@include c2;
-			padding:10px;
-		}
-			.frame-header-inner {
-				@include c2in;
-				padding:10px;
-			}
-		.frame-body {
-			@include display(flex);
-			@include flex-direction(row);
-			@include flex-wrap(wrap);
-		}
-			.frame-main {
-				@include c3;
-				@include flex(9999 400px);
-				padding:10px;
-			}
-				.frame-main-inner {
-					@include c3in;
-					padding:10px;
-				}
-			.frame-side {
-				@include c4;
-				@include flex(1 300px);
-				padding:10px;
-			}
-				.frame-side-inner {
-					@include c4in;
-					padding:10px;
-				}
-		.frame-footer {
-			@include c5;
-			padding:10px;
-		}
-			.frame-footer-inner {
-				@include c5in;
-				padding:10px;
-			}
+  body {
+    @include c1;
+  }
+  .frame-wrapall {
+    margin:0 auto;
+    max-width:1200px;
+    padding:0 10px;
+  }
+    .frame-header {
+      @include c2;
+      padding:10px;
+    }
+      .frame-header-inner {
+        @include c2in;
+        padding:10px;
+      }
+    .frame-body {
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+    }
+      .frame-main {
+        @include c3;
+        @include flex(9999 400px);
+        padding:10px;
+      }
+        .frame-main-inner {
+          @include c3in;
+          padding:10px;
+        }
+      .frame-side {
+        @include c4;
+        @include flex(1 300px);
+        padding:10px;
+      }
+        .frame-side-inner {
+          @include c4in;
+          padding:10px;
+        }
+    .frame-footer {
+      @include c5;
+      padding:10px;
+    }
+      .frame-footer-inner {
+        @include c5in;
+        padding:10px;
+      }
+}
+
+.layoutx1 {
+
+  .block {
+    margin:0 0 10px;
+    padding:10px;
+    border-radius:4px;
+  }
+
+  .header {
+    @include c1;
+    padding:10px;
+  }
+    .header-inner {
+      max-width:1200px;
+      padding:10px;
+      margin:0 auto;
+      @include c1in;
+      @include box-sizing(border-box);
+    }
+  .body {
+    @include c3;
+    padding:10px;
+  }
+    .body-inner {
+      max-width:1200px;
+      @include display(flex);
+      @include flex-flow(wrap);
+      margin:0 auto;
+    }
+      .main {
+        @include c4;
+        @include flex(4 300px);
+        @include box-sizing(border-box);
+        min-width:300px;
+        padding:10px 10px 0;
+        .block {
+          @include c4in;
+        }
+      }
+      .side {
+        @include c5;
+        @include flex(1 300px);
+        @include box-sizing(border-box);
+        min-width:300px;
+        padding:10px 10px 0;
+        .block {
+          @include c5in;
+        }
+      }
+      .side2 {
+        @include c6;
+        @include flex(1 300px);
+        @include box-sizing(border-box);
+        min-width:300px;
+        padding:10px 10px 0;
+        .block {
+          @include c6in;
+        }
+      }
+  .footer {
+    @include c2;
+    padding:10px;
+  }
+    .footer-inner {
+      max-width:1200px;
+      padding:10px;
+      margin:0 auto;
+      @include c2in;
+      @include box-sizing(border-box);
+    }
+}
+
+.layoutx2 {
+
+  &, body {
+    height:100%;
+  }
+
+  .block {
+    margin:0 0 10px;
+    padding:10px;
+    border-radius:4px;
+  }
+
+  .all {
+    @include display(flex);
+    @include flex-flow(column);
+    height:100%;
+    margin:0 auto;
+  }
+    .gheadermenu {
+      @include flex(none);
+      @include c2;
+      @include display(flex);
+      padding:10px 0;
+      @include align-items(stretch);
+      .block {
+        text-align:center;
+        @include c2in;
+        margin:0 10px 0 0;
+        @include flex(auto);
+        &:first-child {
+          margin-left:10px;
+        }
+      }
+    }
+    .body {
+      @include flex(auto);
+      position:relative;
+    }
+      .body-inner {
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        @include display(flex);
+        @include flex-flow(row);
+      }
+        .side {
+          @include c3;
+          overflow-x:scroll;
+          @include flex(1);
+          display:none;
+          padding:10px 10px 0;
+          max-width:250px;
+          .block {
+            @include c3in;
+            margin:0 0 10px;
+          }
+          @media (min-width: 600px) {
+            & {
+              display:block;
+            }
+          }
+        }
+        .main {
+          @include flex(2);
+          @include c4;
+          overflow-x:scroll;
+          padding:10px;
+          .block {
+            @include c4in;
+          }
+        }
+    .gfootermenu {
+      @include flex(none);
+      padding:10px 0;
+      @include display(flex);
+      @include align-items(stretch);
+      @include c2;
+      .block {
+        text-align:center;
+        @include c2in;
+        margin:0 10px 0 0;
+        @include flex(auto);
+        &:first-child {
+          margin-left:10px;
+        }
+      }
+    }
+
+  @media (min-width: 1000px) {
+    .all {
+      @include flex-flow(row);
+    }
+      .gheadermenu {
+        @include flex-flow(column);
+        @include flex(1 auto);
+        @include align-items(flex-end);
+        .block {
+          margin:0 10px 10px;
+          width:50px;
+          @include flex(none);
+        }
+      }
+      .body {
+        max-width:1000px;
+        @include flex(99999 auto);
+      }
+      .gfootermenu {
+        @include flex-flow(column);
+        @include flex(1 auto);
+        @include align-items(flex-start);
+        .block {
+          margin:0 10px 10px;
+          width:50px;
+          @include flex(none);
+        }
+      }
+  }
+
+}
+
+.layoutx3 {
+
+  .block {
+    margin:0 0 10px;
+    padding:10px;
+    border-radius:4px;
+  }
+
+  .header {
+    @include c1;
+    padding:10px;
+  }
+    .header-inner {
+      max-width:1200px;
+      padding:10px;
+      margin:0 auto;
+      @include c1in;
+      @include box-sizing(border-box);
+    }
+      .nav {
+        float:right;
+        a {
+          color:#fff;
+        }
+      }
+  .body {
+    @include c3;
+    padding:10px;
+  }
+    .body-inner {
+      max-width:1200px;
+      @include display(flex);
+      @include flex-flow(wrap);
+      margin:0 auto;
+    }
+      .main {
+        @include c4;
+        order:1;
+        @include flex(auto);
+        width:100%;
+        @include box-sizing(border-box);
+        padding:10px 10px 0;
+        .block {
+          @include c4in;
+        }
+      }
+      .side {
+        @include c5;
+        order:2;
+        @include flex(auto);
+        width:100%;
+        @include box-sizing(border-box);
+        padding:10px 10px 0;
+        .block {
+          @include c5in;
+        }
+      }
+      .side2 {
+        @include c6;
+        order:3;
+        @include flex(auto);
+        width:100%;
+        @include box-sizing(border-box);
+        padding:10px 10px 0;
+        .block {
+          @include c6in;
+        }
+      }
+  .footer {
+    @include c2;
+    padding:10px;
+  }
+    .footer-inner {
+      max-width:1200px;
+      padding:10px;
+      margin:0 auto;
+      @include c2in;
+      @include box-sizing(border-box);
+    }
+
+  @media (min-width: 520px) {
+    .nav {
+      display:none;
+    }
+    .main {
+      width:auto;
+      @include flex(3);
+      min-width:300px;
+      @include order(2);
+    }
+    .side {
+      width:auto;
+      @include flex(1);
+      min-width:100px;
+      @include order(1);
+    }
+    .side2 {
+      @include flex(1);
+      min-width:100px;
+      @include order(3);
+    }
+  }
+
+}
+
+.layoutx4 {
+
+  &, body {
+    height:100%;
+  }
+
+  .block {
+  }
+
+  .frame {
+    height:100%;
+    @include display(flex);
+    @include flex-flow(column);
+  }
+    .header {
+      height:60px;
+      padding:10px 10px 10px 0;
+      @include box-sizing(border-box);
+      @include c2;
+      @include display(flex);
+      @include flex-flow(row);
+      > div {
+        @include c2in;
+        margin:0 0 0 10px;
+        text-align:center;
+        line-height:40px;
+      }
+      .logo {
+        width:100px;
+      }
+      .nav {
+        width:50px;
+      }
+    }
+    .body {
+      @include flex(auto);
+      position:relative;
+    }
+      .body-inner {
+        @include display(flex);
+        @include flex-direction(row);
+        @include flex-flow(wrap);
+        padding:5px;
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        overflow-y:scroll;
+        @include c2in;
+      }
+        .block {
+          @include flex(1 200px);
+          @include c3;
+          margin:5px;
+          padding:10px;
+          .img {
+            @include c3in;
+            height:200px;
+          }
+          .caption {
+            padding:8px 0 0;
+            font-size:11px;
+          }
+        }
+
+  @media (min-width: 600px) {
+    .frame {
+      @include flex-flow(row);
+    }
+    .header {
+      height:100%;
+      width:100px;
+      padding:10px 10px 0;
+      @include flex-flow(column);
+      > div {
+        margin:0 0 10px;
+      }
+      .logo {
+        width:auto;
+        line-height:100px;
+      }
+      .nav {
+        width:auto;
+      }
+    }
+  }
+
 }
