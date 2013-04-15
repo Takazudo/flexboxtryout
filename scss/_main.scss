@@ -866,7 +866,7 @@ body { color:#fff; }
       }
         .side {
           @include c3;
-          overflow-x:scroll;
+          overflow-y:auto;
           @include flex(1);
           display:none;
           padding:10px 10px 0;
@@ -884,7 +884,7 @@ body { color:#fff; }
         .main {
           @include flex(2);
           @include c4;
-          overflow-x:scroll;
+          overflow-y:auto;
           padding:10px;
           .block {
             @include c4in;
@@ -1092,7 +1092,7 @@ body { color:#fff; }
         top:0;
         right:0;
         bottom:0;
-        overflow-y:scroll;
+        overflow-y:auto;
         @include c2in;
       }
         .block {
