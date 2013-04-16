@@ -474,7 +474,7 @@ body { color:#fff; }
   .frame-wrapall {
     @include display(flex);
     @include flex-direction(row);
-    @include flex-flow(wrap);
+    @include flex-wrap(wrap);
     border-right:1px solid #333;
     border-bottom:1px solid #333;
     @include c1;
@@ -507,7 +507,7 @@ body { color:#fff; }
     .frame-wrapall-inner {
       @include display(flex);
       @include flex-direction(row);
-      @include flex-flow(wrap);
+      @include flex-wrap(wrap);
       @include justify-content(center);
       border-right:1px solid #333;
       border-bottom:1px solid #333;
@@ -600,7 +600,7 @@ body { color:#fff; }
   .frame-wrapall {
     @include c3;
     @include display(flex);
-    @include flex-flow(wrap);
+    @include flex-wrap(wrap);
     width:100%;
     height:100%;
     @include box-sizing(border-box);
@@ -659,7 +659,7 @@ body { color:#fff; }
           min-height:150px;
           @include display(flex);
           @include flex-direction(row);
-          @include flex-flow(wrap);
+          @include flex-wrap(wrap);
           @include c4;
           padding:10px;
         }
@@ -771,7 +771,7 @@ body { color:#fff; }
     .body-inner {
       max-width:1200px;
       @include display(flex);
-      @include flex-flow(wrap);
+      @include flex-wrap(wrap);
       margin:0 auto;
     }
       .main {
@@ -971,7 +971,7 @@ body { color:#fff; }
     .body-inner {
       max-width:1200px;
       @include display(flex);
-      @include flex-flow(wrap);
+      @include flex-wrap(wrap);
       margin:0 auto;
     }
       .main {
@@ -1085,7 +1085,7 @@ body { color:#fff; }
       .body-inner {
         @include display(flex);
         @include flex-direction(row);
-        @include flex-flow(wrap);
+        @include flex-wrap(wrap);
         padding:5px;
         position:absolute;
         left:0;
@@ -1131,5 +1131,366 @@ body { color:#fff; }
       }
     }
   }
+
+}
+.layoutx5 {
+
+  &, body {
+    height:100%;
+  }
+
+  .block {
+    margin:0 0 10px;
+    padding:10px;
+  }
+
+  .frame {
+    @include display(flex);
+    @include flex-flow(row);
+    height:100%;
+  }
+
+    .side {
+      width:200px;
+      @include flex(none);
+      height:100%;
+      @include display(flex);
+      @include flex-flow(column);
+    }
+      .sideheader {
+        @include c1;
+        @include flex(none);
+        height:40px;
+        line-height:40px;
+        padding:0 10px;
+      }
+      .sidebody {
+        @include flex(auto);
+        position:relative;
+      }
+        .sidebody-inner {
+          @include c2;
+          position:absolute;
+          left:0;
+          top:0;
+          right:0;
+          bottom:0;
+          overflow-y:auto;
+          padding:10px 10px 0;
+          .block {
+            @include c2in;
+          }
+        }
+    .main {
+      @include flex(auto);
+      height:100%;
+      @include display(flex);
+      @include flex-flow(column);
+    }
+      .mainheader {
+        @include c3;
+        @include flex(none);
+        height:40px;
+        line-height:40px;
+        padding:0 10px;
+      }
+      .mainbody {
+        @include flex(auto);
+        position:relative;
+      }
+        .mainbody-inner {
+          @include c4;
+          position:absolute;
+          left:0;
+          top:0;
+          right:0;
+          bottom:0;
+          overflow-y:auto;
+          padding:10px 10px 0;
+          .block {
+            @include c4in;
+          }
+        }
+
+}
+.layoutx6 {
+
+  &, body {
+    height:100%;
+  }
+
+  .block {
+    padding:10px;
+    margin:0 0 10px;
+  }
+
+  .frame {
+    height:100%;
+    @include display(flex);
+    @include flex-flow(column);
+  }
+
+  .body {
+    @include flex(auto);
+    width:100%;
+    position:relative;
+  }
+    .body-inner {
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      overflow-x: auto;
+      @include display(flex);
+      @include flex-flow(column);
+    }
+      .group {
+        min-width:320px;
+        @include flex(1 640px);
+        @include display(flex);
+        @include flex-flow(column);
+      }
+        .groupheader {
+          @include flex(none);
+          height:40px;
+          line-height:40px;
+          padding:0 10px;
+          @include c2;
+          border-top:1px solid #fff;
+          border-bottom:1px solid #fff;
+        }
+        .groupbody {
+          @include flex(auto);
+          position:relative;
+        }
+          .groupbody-inner {
+            padding:10px 10px 0;
+            @include c3;
+            &:after { // to keep final margin
+              content: '';
+              display:table;
+              height:0;
+            }
+            .block {
+              @include c3in;
+              overflow:hidden;
+              .img {
+                float:left;
+                margin:0 10px 10px 0;
+                border:1px solid #fff;
+                width:80px;
+                height:80px;
+              }
+              .woimg {
+                overflow:hidden;
+                *zoom:1; /* ie */
+              }
+            }
+          }
+  .footer {
+    height:40px;
+    line-height:40px;
+    @include flex(none);
+    padding:0 10px;
+    @include c5;
+  }
+
+  @media (min-width: 520px) {
+    .body-inner {
+      @include flex-flow(row);
+    }
+      .group {
+        border-left:1px solid #fff;
+        &:first-child {
+          border-left:0;
+        }
+      }
+        .groupbody-inner {
+          position:absolute;
+          left:0;
+          right:0;
+          bottom:0;
+          top:0;
+          overflow-y:scroll;
+        }
+  }
+
+}
+.layoutx7 {
+
+  &, body {
+    height:100%;
+  }
+
+  .block {
+    padding:10px 10px 0;
+    margin:5px;
+    @include flex(1 320px);
+    @include c3in;
+    .blockheader {
+      overflow:hidden;
+      border-bottom:1px dotted #fff;
+      margin:0 0 15px;
+      padding:0 0 5px;
+      .img {
+        float:left;
+        border:1px solid #fff;
+        width:50px;
+        height:50px;
+        margin:0 10px 10px 0;
+      }
+      .note {
+        overflow:hidden;
+        margin:0 0 10px;
+      }
+    }
+    .blockbody {
+      padding:0 0 10px;
+    }
+  }
+
+  .frame {
+    @include display(flex);
+    @include flex-flow(column);
+    height:100%;
+  }
+
+    .header {
+      height:40px;
+      line-height:40px;
+      padding:0 10px;
+      @include c5;
+    }
+    .body {
+      @include flex(auto);
+      position:relative;
+    }
+      .body-inner {
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        padding:5px;
+        @include c3;
+        @include display(flex);
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        overflow-y:auto;
+      }
+    .footer {
+      height:40px;
+      line-height:40px;
+      padding:0 10px;
+      @include c2;
+    }
+
+}
+.layoutx8 {
+
+  &, body {
+    height:100%;
+  }
+
+  body {
+    @include c3;
+  }
+
+  .block {
+    min-width:320px;
+    @include display(flex);
+    @include align-items(center);
+    @include flex-direction(column);
+    @include justify-content(center);
+    .img {
+      width:300px;
+      height:360px;
+      margin:20px auto 0;
+      @include c3in;
+    }
+    .note {
+      font-size:12px;
+      padding:10px 10px 20px;
+      text-align:center;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .frame {
+      height:100%;
+      @include display(flex);
+      padding:0 40px;
+    }
+    .block {
+      padding:0 20px;
+    }
+  }
+
+}
+.layoutx9 {
+  
+  &, body {
+    height:100%;
+  }
+
+  .block {
+    border:1px solid #fff;
+    padding:10px;
+    margin:0 0 10px;
+    @include flex(auto);
+  }
+
+  .frame {
+    height:100%;
+    @include box-sizing(border-box);
+    padding:5px;
+    @include c3;
+    @include flex-wrap(wrap);
+    overflow-y:auto;
+  }
+  .group {
+    @include c3in;
+    margin:5px 5px 10px;
+    @include flex(1 240px);
+    @include box-sizing(border-box);
+    border:1px solid #fff;
+    @include display(flex);
+    @include flex-direction(column);
+  }
+    .groupheader {
+      @include c3;
+      padding:0 10px;
+      line-height:30px;
+      text-align:center;
+      border-bottom:1px solid #fff;
+    }
+    .body {
+      @include flex(auto);
+      position:relative;
+    }
+      .body-inner {
+        padding:10px 10px 0;
+        overflow-y:auto;
+        @include display(flex);
+        @include flex-direction(column);
+      }
+
+  @media (min-width: 720px) {
+    .frame {
+      @include display(flex);
+    }
+      .group {
+        margin:5px;
+      }
+      .body-inner {
+        position:absolute;
+        left:0;
+        top:0;
+        bottom:0;
+        right:0;
+      }
+  }
+
 
 }
